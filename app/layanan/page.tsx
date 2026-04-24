@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import WhatsAppButton, { WA_URL } from "../components/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Layanan",
@@ -205,7 +206,7 @@ export default function LayananPage() {
             <svg className="w-4 h-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" />
             </svg>
-            Hasil instan · Mulai dari Rp 5.000 · Tersedia di 9 provinsi
+            Hasil instan · Mulai dari Rp 5.000 · Tersedia di 24 kota Indonesia
           </div>
         </div>
         <div className="absolute bottom-0 inset-x-0">
@@ -265,15 +266,17 @@ export default function LayananPage() {
                         <span className={`inline-block px-4 py-2 rounded-full text-sm font-semibold border ${c.badge}`}>
                           {s.price}
                         </span>
-                        <Link
-                          href="/kontak"
+                        <a
+                          href={WA_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 text-sky-600 font-semibold text-sm hover:text-sky-700 transition-colors"
                         >
                           Cari stasiun terdekat
                           <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                           </svg>
-                        </Link>
+                        </a>
                       </div>
                     </div>
 
@@ -367,16 +370,23 @@ export default function LayananPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    href="/kontak"
-                    className={`block text-center font-semibold py-3 px-6 rounded-xl transition-colors text-sm ${
-                      pkg.popular
-                        ? "bg-emerald-600 text-white hover:bg-emerald-700"
-                        : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                    }`}
-                  >
-                    Pilih Paket
-                  </Link>
+                  {pkg.popular ? (
+                    <a
+                      href={WA_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-center font-semibold py-3 px-6 rounded-xl transition-colors text-sm bg-emerald-600 text-white hover:bg-emerald-700"
+                    >
+                      Hubungi untuk Harga
+                    </a>
+                  ) : (
+                    <Link
+                      href="/kontak"
+                      className="block text-center font-semibold py-3 px-6 rounded-xl transition-colors text-sm bg-slate-100 text-slate-700 hover:bg-slate-200"
+                    >
+                      Tanya Lebih Lanjut
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}
@@ -398,12 +408,9 @@ export default function LayananPage() {
             Anda bersama tim kami.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/kontak"
-              className="inline-flex items-center justify-center bg-white text-sky-700 font-semibold px-8 py-4 rounded-xl hover:bg-sky-50 transition-colors shadow-lg"
-            >
-              Temukan Stasiun Terdekat
-            </Link>
+            <WhatsAppButton className="shadow-lg shadow-black/20">
+              Tanya Lokasi Terdekat →
+            </WhatsAppButton>
             <Link
               href="/about"
               className="inline-flex items-center justify-center bg-white/10 text-white font-semibold px-8 py-4 rounded-xl border border-white/30 hover:bg-white/20 transition-colors"

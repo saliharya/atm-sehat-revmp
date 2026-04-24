@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { WA_URL } from "./WhatsAppButton";
 
 const navLinks = [
   { href: "/", label: "Beranda" },
@@ -82,12 +83,14 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <Link
-              href="/kontak"
-              className="bg-sky-600 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-sky-700 transition-colors shadow-sm"
+            <a
+              href={WA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-green-600 transition-colors shadow-sm"
             >
               Hubungi Kami
-            </Link>
+            </a>
           </div>
 
           {/* Mobile toggle */}
@@ -149,12 +152,14 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="pt-3 pb-1">
-                <Link
-                  href="/kontak"
-                  className="block w-full text-center bg-sky-600 text-white px-5 py-3 rounded-xl text-sm font-semibold hover:bg-sky-700 transition-colors"
+                <a
+                  href={WA_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center bg-green-500 text-white px-5 py-3 rounded-xl text-sm font-semibold hover:bg-green-600 transition-colors"
                 >
                   Hubungi Kami
-                </Link>
+                </a>
               </div>
             </div>
           </div>
