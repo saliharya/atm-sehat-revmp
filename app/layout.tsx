@@ -9,7 +9,10 @@ const geist = Geist({
   subsets: ["latin"],
 });
 
+const BASE_URL = "https://atm-sehat.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   title: {
     default: "ATM Sehat – Cek Kesehatan Semudah Cek Saldo",
     template: "%s | ATM Sehat",
@@ -34,16 +37,25 @@ export const metadata: Metadata = {
     title: "ATM Sehat – Telehealth for Everyone",
     description:
       "Layanan cek kesehatan lengkap dan konsultasi dokter online yang mudah diakses oleh seluruh masyarakat Indonesia.",
-    url: "https://atm-sehat.com",
+    url: BASE_URL,
     siteName: "ATM Sehat",
     locale: "id_ID",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ATM Sehat – Anjungan Telehealth Masyarakat Sehat",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "ATM Sehat – Telehealth for Everyone",
     description:
       "Layanan cek kesehatan lengkap dan konsultasi dokter online yang mudah diakses oleh seluruh masyarakat Indonesia.",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -51,7 +63,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   alternates: {
-    canonical: "https://atm-sehat.com",
+    canonical: BASE_URL,
   },
 };
 

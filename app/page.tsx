@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import WhatsAppButton, { WA_URL } from "./components/WhatsAppButton";
+import { AnimateIn, StaggerGrid, StaggerItem } from "./components/AnimateIn";
 
 export const metadata: Metadata = {
   title: "ATM Sehat – Cek Kesehatan Semudah Cek Saldo",
@@ -283,11 +284,13 @@ export default function HomePage() {
         {/* Trust bar */}
         <div className="absolute bottom-0 inset-x-0">
           <div className="bg-white/10 backdrop-blur-sm border-t border-white/10 py-3">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-4 flex-wrap justify-center">
-              <span className="text-white/50 text-xs font-semibold uppercase tracking-wider">Dipercaya oleh:</span>
-              {["Klinik Sehat Prima", "PT Astra Group", "Apotek K24", "Posyandu Melati", "RS Hermina"].map((p) => (
-                <span key={p} className="text-white/70 text-xs font-medium bg-white/10 px-3 py-1.5 rounded-full border border-white/20">{p}</span>
-              ))}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex items-center gap-3 overflow-x-auto scrollbar-hide">
+                <span className="shrink-0 text-white/50 text-xs font-semibold uppercase tracking-wider whitespace-nowrap">Bermitra dengan:</span>
+                {["OMRON", "Alita", "Kemenperindag RI", "DIIB UI", "Mor Clinic"].map((p) => (
+                  <span key={p} className="shrink-0 text-white/70 text-xs font-medium bg-white/10 px-3 py-1.5 rounded-full border border-white/20 whitespace-nowrap">{p}</span>
+                ))}
+              </div>
             </div>
           </div>
           <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none" className="w-full h-16 lg:h-20" aria-hidden="true">
@@ -299,19 +302,21 @@ export default function HomePage() {
       {/* ── Problem ── */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <SectionBadge>Tantangan Kesehatan Indonesia</SectionBadge>
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
-              Mengapa Masyarakat Enggan Cek Kesehatan?
-            </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-lg">
-              Survei nasional mengungkap fakta mengejutkan tentang akses layanan kesehatan di Indonesia.
-            </p>
-          </div>
+          <AnimateIn>
+            <div className="text-center mb-14">
+              <SectionBadge>Tantangan Kesehatan Indonesia</SectionBadge>
+              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+                Mengapa Masyarakat Enggan Cek Kesehatan?
+              </h2>
+              <p className="text-slate-500 max-w-2xl mx-auto text-lg">
+                Survei nasional mengungkap fakta mengejutkan tentang akses layanan kesehatan di Indonesia.
+              </p>
+            </div>
+          </AnimateIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <StaggerGrid className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {problems.map((p) => (
-              <div key={p.stat} className="relative bg-slate-50 rounded-2xl p-8 border border-slate-100 overflow-hidden">
+              <StaggerItem key={p.stat} className="relative bg-slate-50 rounded-2xl p-8 border border-slate-100 overflow-hidden">
                 <div className="absolute top-0 right-0 text-8xl font-bold text-slate-100 leading-none select-none pointer-events-none" aria-hidden="true">
                   {p.pct.replace("%", "")}
                 </div>
@@ -321,9 +326,9 @@ export default function HomePage() {
                   <p className="text-slate-500 text-sm leading-relaxed">{p.desc}</p>
                   <p className="text-xs text-slate-400 mt-4 font-medium">Sumber: {p.source}</p>
                 </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerGrid>
 
           <div className="bg-gradient-to-br from-sky-600 to-emerald-600 rounded-3xl p-8 lg:p-12 text-white text-center">
             <h3 className="text-2xl lg:text-3xl font-bold mb-4">ATM Sehat Hadir sebagai Solusi</h3>
@@ -345,28 +350,30 @@ export default function HomePage() {
       {/* ── Services ── */}
       <section className="py-20 lg:py-28 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <SectionBadge color="emerald">Parameter Ukur</SectionBadge>
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
-              8 Parameter Kesehatan dalam Satu Stasiun
-            </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-lg">
-              Alat bermerek tersertifikasi Kemenkes RI. Akurasi rata-rata 95%.
-            </p>
-          </div>
+          <AnimateIn>
+            <div className="text-center mb-14">
+              <SectionBadge color="emerald">Parameter Ukur</SectionBadge>
+              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+                8 Parameter Kesehatan dalam Satu Stasiun
+              </h2>
+              <p className="text-slate-500 max-w-2xl mx-auto text-lg">
+                Alat bermerek tersertifikasi Kemenkes RI. Akurasi rata-rata 95%.
+              </p>
+            </div>
+          </AnimateIn>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <StaggerGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {services.map((s) => (
-              <div key={s.title} className="group bg-white rounded-2xl p-6 border border-slate-100 card-hover cursor-default">
+              <StaggerItem key={s.title} className="group bg-white rounded-2xl p-6 border border-slate-100 card-hover cursor-default">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-colors ${colorMap[s.color] ?? colorMap.sky}`}>
                   <Icon path={s.icon} className="w-6 h-6" />
                 </div>
                 <h3 className="font-semibold text-slate-900 mb-1 text-base">{s.title}</h3>
                 <p className="text-xs text-slate-400 mb-2 font-medium">{s.brand}</p>
                 <p className="text-sm text-slate-500 leading-relaxed">{s.desc}</p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerGrid>
 
           <div className="text-center mt-10">
             <Link href="/layanan" className="inline-flex items-center gap-2 text-sky-600 font-semibold hover:text-sky-700 transition-colors">
@@ -599,17 +606,19 @@ export default function HomePage() {
       {/* ── Awards ── */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <SectionBadge color="amber">Penghargaan & Pengakuan</SectionBadge>
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Diakui Secara Nasional & Internasional</h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-lg">
-              Inovasi ATM Sehat telah mendapat pengakuan dari berbagai lembaga bergengsi.
-            </p>
-          </div>
+          <AnimateIn>
+            <div className="text-center mb-14">
+              <SectionBadge color="amber">Penghargaan & Pengakuan</SectionBadge>
+              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Diakui Secara Nasional & Internasional</h2>
+              <p className="text-slate-500 max-w-2xl mx-auto text-lg">
+                Inovasi ATM Sehat telah mendapat pengakuan dari berbagai lembaga bergengsi.
+              </p>
+            </div>
+          </AnimateIn>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <StaggerGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {awards.map((a) => (
-              <div key={a.event} className={`rounded-2xl p-6 border ${awardColorMap[a.color]} text-center card-hover`}>
+              <StaggerItem key={a.event} className={`rounded-2xl p-6 border ${awardColorMap[a.color]} text-center card-hover`}>
                 <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mx-auto mb-5 shadow-sm">
                   <Icon path={a.icon} className="w-7 h-7" />
                 </div>
@@ -617,9 +626,9 @@ export default function HomePage() {
                 <div className="text-xl font-bold mb-1">{a.title}</div>
                 <div className="font-medium text-sm mb-1">{a.event}</div>
                 <div className="text-xs opacity-70">{a.org}</div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerGrid>
 
           <div className="mt-10 text-center">
             <p className="text-slate-400 text-sm mb-4">Juga didukung oleh</p>
@@ -637,16 +646,20 @@ export default function HomePage() {
       {/* ── Testimonials + Certifications ── */}
       <section className="py-20 lg:py-28 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <SectionBadge color="emerald">Testimoni</SectionBadge>
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Yang Mereka Katakan</h2>
-          </div>
+          <AnimateIn>
+            <div className="text-center mb-14">
+              <SectionBadge color="emerald">Testimoni</SectionBadge>
+              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Yang Mereka Katakan</h2>
+            </div>
+          </AnimateIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+          <StaggerGrid className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
             {testimonials.map((t) => (
-              <TestimonialCard key={t.name} {...t} />
+              <StaggerItem key={t.name}>
+                <TestimonialCard {...t} />
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerGrid>
 
           {/* Certifications */}
           <div className="bg-white rounded-2xl border border-slate-100 p-8">
@@ -742,7 +755,7 @@ export default function HomePage() {
             </Link>
           </div>
           <p className="text-white/40 text-sm">
-            +62 823-4837-1262 (Sigit) &nbsp;·&nbsp; info@atm-sehat.com
+            +62 823-4837-1262 &nbsp;·&nbsp; contact@tsi.co.id
           </p>
         </div>
       </section>
