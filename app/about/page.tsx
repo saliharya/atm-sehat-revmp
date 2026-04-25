@@ -51,7 +51,7 @@ const team = [
     color: "cyan",
   },
   {
-    name: "dr. Andi Khomeini Takdir, Sp.PD",
+    name: "dr. Andi Khomeini Takdir Haruni, Sp.PD",
     role: "Chief Medical Services Officer",
     bio: "Dokter spesialis penyakit dalam yang memimpin standar kualitas layanan medis dan protokol teleconsultation di seluruh jaringan ATM Sehat.",
     photo: null,
