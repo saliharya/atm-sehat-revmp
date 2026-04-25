@@ -3,9 +3,9 @@ import Link from "next/link";
 import WhatsAppButton from "../components/WhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Tentang Kami",
+  title: "Tentang ATM Sehat | Inovasi Kesehatan Digital Indonesia",
   description:
-    "Pelajari kisah ATM Sehat — inovasi kesehatan berbasis IoT dari PT Tele Sehat Indonesia. Visi, misi, tim profesional, dan perjalanan kami dalam mewujudkan akses kesehatan untuk semua.",
+    "PT Tele Sehat Indonesia mengembangkan ATM Sehat — kiosk kesehatan IoT yang menjangkau 24 kota Indonesia. Dipimpin tim dokter & engineer berpengalaman. Pemenang ASEAN ICT Awards 2019 & Tanoto Awards 2018.",
 };
 
 /* ─── Team members with real photo URLs ─── */
@@ -191,9 +191,10 @@ export default function AboutPage() {
               {/* Awards */}
               <div className="flex flex-wrap gap-3 mt-7">
                 {[
-                  { emoji: "🏆", title: "Juara 2 IdenTIK 2019", sub: "Kominfo — R&D Category" },
-                  { emoji: "🌏", title: "ASEAN Finalist", sub: "IdenTIK International Stage" },
-                  { emoji: "🔌", title: "Plug & Play APAC", sub: "Portfolio Startup" },
+                  { emoji: "🥇", title: "Juara 1 Tanoto Awards", sub: "Tanoto Foundation — 2018" },
+                  { emoji: "🌏", title: "Winner ASEAN ICT Awards", sub: "ASEAN ICT Awards, Laos — 2019" },
+                  { emoji: "🏆", title: "Juara 2 IdenTIK 2019", sub: "Kementerian Kominfo RI — R&D" },
+                  { emoji: "🔌", title: "Didanai GK Plug & Play", sub: "Plug & Play APAC — 2019" },
                 ].map((a) => (
                   <div key={a.title} className="flex items-center gap-3 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3">
                     <span className="text-2xl">{a.emoji}</span>

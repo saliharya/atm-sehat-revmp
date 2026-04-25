@@ -3,9 +3,9 @@ import Link from "next/link";
 import WhatsAppButton, { WA_URL } from "../components/WhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Layanan",
+  title: "Layanan & Paket Harga ATM Sehat | 8 Pemeriksaan Kesehatan",
   description:
-    "Temukan semua layanan ATM Sehat: cek tekanan darah, gula darah, kolesterol, asam urat, suhu tubuh, saturasi oksigen, konsultasi dokter online, dan kesehatan anak. Mulai dari Rp 5.000.",
+    "Paket lengkap ATM Sehat: Tekanan Darah, Gula Darah, Kolesterol, Asam Urat, Suhu, SpO2, Konsultasi Dokter Online & Kesehatan Anak. Mulai dari Rp 5.000. Dapatkan konsultasi gratis hari ini.",
 };
 
 const services = [
@@ -264,15 +264,15 @@ export default function LayananPage() {
 
                       <div className="flex items-center justify-between flex-wrap gap-4">
                         <span className={`inline-block px-4 py-2 rounded-full text-sm font-semibold border ${c.badge}`}>
-                          {s.price}
+                          💰 {s.price}
                         </span>
                         <a
                           href={WA_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-sky-600 font-semibold text-sm hover:text-sky-700 transition-colors"
+                          className="inline-flex items-center gap-2 text-white bg-sky-600 font-semibold text-sm px-4 py-2 rounded-lg hover:bg-sky-700 transition-colors"
                         >
-                          Cari stasiun terdekat
+                          📞 Hubungi Kami
                           <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                           </svg>
@@ -398,26 +398,33 @@ export default function LayananPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 hero-gradient">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Siap Mulai Cek Kesehatan?
+      <section className="py-24 lg:py-32 hero-gradient">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-block text-amber-300 text-xs font-bold uppercase tracking-widest px-4 py-2 bg-white/10 rounded-full border border-white/20 mb-6">
+            ⏱ Respons Dalam 2 Jam
+          </span>
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            Transformasi Pelayanan Kesehatan Anda Sekarang
           </h2>
-          <p className="text-white/80 mb-8 text-lg">
-            Temukan stasiun ATM Sehat terdekat atau konsultasikan kebutuhan kesehatan
-            Anda bersama tim kami.
+          <p className="text-white/80 mb-10 text-lg leading-relaxed max-w-2xl mx-auto">
+            Bergabunglah dengan ratusan fasilitas kesehatan yang sudah meningkatkan kualitas layanan.
+            Konsultasi gratis, tanpa komitmen — hubungi tim kami hari ini.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <WhatsAppButton className="shadow-lg shadow-black/20">
-              Tanya Lokasi Terdekat →
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <WhatsAppButton className="shadow-lg shadow-black/30 text-lg px-10 py-5 font-bold">
+              💬 Konsultasi Gratis via WhatsApp
             </WhatsAppButton>
             <Link
-              href="/about"
-              className="inline-flex items-center justify-center bg-white/10 text-white font-semibold px-8 py-4 rounded-xl border border-white/30 hover:bg-white/20 transition-colors"
+              href="/kontak"
+              className="inline-flex items-center justify-center gap-2 bg-white/15 text-white font-semibold px-8 py-5 rounded-xl border border-white/40 hover:bg-white/25 transition-colors text-base"
             >
-              Pelajari Teknologi Kami
+              Hubungi Tim Kami
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
             </Link>
           </div>
+          <p className="text-white/60 text-sm">📞 +62 823-4837-1262 · 📧 info@atm-sehat.com</p>
         </div>
       </section>
     </>

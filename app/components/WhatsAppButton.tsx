@@ -55,7 +55,7 @@ export default function WhatsAppButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center gap-2 font-semibold rounded-xl transition-colors text-base ${variantClasses[variant]} ${className}`}
+      className={`inline-flex items-center justify-center gap-2 font-semibold rounded-xl transition-colors text-base ${className} ${variantClasses[variant]}`}
     >
       <WhatsAppIcon />
       {children}

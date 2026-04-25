@@ -4,9 +4,9 @@ import WhatsAppButton, { WA_URL } from "./components/WhatsAppButton";
 import { AnimateIn, StaggerGrid, StaggerItem } from "./components/AnimateIn";
 
 export const metadata: Metadata = {
-  title: "ATM Sehat – Cek Kesehatan Semudah Cek Saldo",
+  title: "ATM Sehat – Kiosk Kesehatan Digital IoT | Cek Kesehatan Mudah & Terjangkau",
   description:
-    "Layanan cek kesehatan lengkap berbasis IoT: tekanan darah, gula darah, kolesterol, dan konsultasi dokter online. Tersedia di 24 kota Indonesia.",
+    "ATM Sehat adalah kiosk kesehatan digital terdepan di Indonesia. Cek tekanan darah, gula darah, kolesterol, asam urat dalam 1 stasiun. Mulai dari Rp 5.000. Telah beroperasi di 9 provinsi. Konsultasi dokter online tersedia.",
 };
 
 /* ─── Shared icon helper ─── */
@@ -45,9 +45,9 @@ function SectionBadge({ children, color = "sky" }: { children: string; color?: s
 
 /* ─── Data ─── */
 const stats = [
-  { value: "500+", label: "Alat Terpasang" },
-  { value: "120K+", label: "Pasien Terlayani" },
-  { value: "24", label: "Kota di Indonesia" },
+  { value: "145+", label: "Unit Terpasang" },
+  { value: "6.500+", label: "Pengguna Aktif" },
+  { value: "9", label: "Provinsi" },
   { value: "Kemenkes RI", label: "Bermitra Resmi" },
 ];
 
@@ -131,23 +131,6 @@ const awardColorMap: Record<string, string> = {
   emerald: "bg-emerald-50 border-emerald-200 text-emerald-700",
 };
 
-const testimonials = [
-  {
-    quote: "Sejak pasang ATM Sehat, antrian di klinik kami turun drastis. Pasien bisa cek sendiri sambil menunggu dokter — hasil langsung masuk HP mereka.",
-    name: "dr. Ratna Sari",
-    role: "Kepala Klinik Sehat Prima, Surabaya",
-  },
-  {
-    quote: "HR kami sekarang bisa pantau kesehatan 800 karyawan dari satu dashboard. Sangat membantu program K3 perusahaan kami.",
-    name: "Budi Hartono",
-    role: "HR Manager, PT Maju Bersama Industries",
-  },
-  {
-    quote: "Alat ini simpel dan cepat. Warga posyandu kami bisa cek tensi dan gula darah sendiri. Hasilnya langsung tercatat — dokter pun bisa pantau dari jauh.",
-    name: "Ibu Siti Rahayu",
-    role: "Kader Posyandu Melati, Bandung",
-  },
-];
 
 const certifications = [
   { name: "Tensimeter (Omron)", num: "KEMENKES RI AKL 20501220368" },
@@ -171,26 +154,6 @@ const problems = [
   { pct: "51%", stat: "Terkendala Waktu", desc: "Lebih dari separuh responden menyebut keterbatasan waktu sebagai hambatan utama cek kesehatan.", source: "HonestDocs Survey" },
   { pct: "24%", stat: "Takut & Tidak Nyaman", desc: "Seperempat responden enggan cek kesehatan karena rasa takut dan ketidaknyamanan.", source: "HonestDocs Survey" },
 ];
-
-/* ─── Reusable TestimonialCard ─── */
-function TestimonialCard({ quote, name, role }: { quote: string; name: string; role: string }) {
-  return (
-    <div className="bg-white rounded-2xl p-7 border border-slate-100 card-hover flex flex-col">
-      <div className="flex gap-0.5 text-amber-400 mb-4" aria-label="5 bintang">
-        {Array.from({ length: 5 }).map((_, i) => (
-          <svg key={i} className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-          </svg>
-        ))}
-      </div>
-      <p className="text-slate-600 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{quote}&rdquo;</p>
-      <div>
-        <p className="font-semibold text-slate-900 text-sm">{name}</p>
-        <p className="text-xs text-slate-400 mt-0.5">{role}</p>
-      </div>
-    </div>
-  );
-}
 
 /* ─── Reusable CertBadge ─── */
 function CertBadge({ name, num }: { name: string; num: string }) {
@@ -231,19 +194,19 @@ export default function HomePage() {
                 <span className="text-sky-300">Semudah Cek Saldo</span>
               </h1>
               <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-xl animate-fade-in-up delay-100">
-                Alat IoT pintar untuk klinik, pabrik, apotek, dan posyandu — terkoneksi langsung ke rekam medis digital. Mulai dari{" "}
-                <span className="text-white font-semibold">Rp 5.000</span>.
+                Stasiun kesehatan pintar yang memudahkan cek tekanan darah, gula darah, kolesterol, dan konsultasi dokter — dari Rp 5.000. Sudah dipercaya oleh{" "}
+                <span className="text-white font-semibold">19+ mitra fasilitas kesehatan</span>.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in-up delay-200">
-                <WhatsAppButton className="shadow-lg shadow-black/20">
-                  Hubungi Kami via WhatsApp →
+              <div className="flex flex-col sm:flex-row gap-3 mb-12 animate-fade-in-up delay-200">
+                <WhatsAppButton className="shadow-lg shadow-black/30 text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 font-bold">
+                  💬 Hubungi Kami via WhatsApp
                 </WhatsAppButton>
                 <Link
                   href="/layanan"
-                  className="inline-flex items-center justify-center gap-2 bg-white/10 text-white font-semibold px-7 py-4 rounded-xl border border-white/30 hover:bg-white/20 transition-colors text-base"
+                  className="inline-flex items-center justify-center gap-2 bg-white/15 text-white font-semibold px-6 py-4 rounded-xl border border-white/40 hover:bg-white/25 transition-colors text-sm"
                 >
-                  Lihat Semua Layanan
+                  Lihat Layanan
                   <Icon path="M5 12h14M12 5l7 7-7 7" className="w-4 h-4" />
                 </Link>
               </div>
@@ -281,18 +244,8 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Trust bar */}
+        {/* Simple wave divider only */}
         <div className="absolute bottom-0 inset-x-0">
-          <div className="bg-white/10 backdrop-blur-sm border-t border-white/10 py-3">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex items-center gap-3 overflow-x-auto scrollbar-hide">
-                <span className="shrink-0 text-white/50 text-xs font-semibold uppercase tracking-wider whitespace-nowrap">Bermitra dengan:</span>
-                {["OMRON", "Alita", "Kemenperindag RI", "DIIB UI", "Mor Clinic"].map((p) => (
-                  <span key={p} className="shrink-0 text-white/70 text-xs font-medium bg-white/10 px-3 py-1.5 rounded-full border border-white/20 whitespace-nowrap">{p}</span>
-                ))}
-              </div>
-            </div>
-          </div>
           <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none" className="w-full h-16 lg:h-20" aria-hidden="true">
             <path d="M0 80L1440 80L1440 40C1200 80 960 0 720 40C480 80 240 0 0 40L0 80Z" fill="white" />
           </svg>
@@ -331,18 +284,23 @@ export default function HomePage() {
           </StaggerGrid>
 
           <div className="bg-gradient-to-br from-sky-600 to-emerald-600 rounded-3xl p-8 lg:p-12 text-white text-center">
-            <h3 className="text-2xl lg:text-3xl font-bold mb-4">ATM Sehat Hadir sebagai Solusi</h3>
+            <h3 className="text-2xl lg:text-3xl font-bold mb-4">Siap Tingkatkan Layanan Kesehatan Anda?</h3>
             <p className="text-white/85 max-w-2xl mx-auto text-lg leading-relaxed mb-8">
-              Kami menghapus semua hambatan dengan stasiun kesehatan pintar yang mudah diakses,
-              terjangkau, dan memberikan hasil instan — mulai dari Rp 5.000 saja.
+              ATM Sehat menghapus semua hambatan: mudah diakses, terjangkau (mulai Rp 5.000), dan hasil instan.
+              Tim kami siap membantu dari konsultasi gratis hingga instalasi.
             </p>
-            <Link
-              href="/layanan"
-              className="inline-flex items-center gap-2 bg-white text-sky-700 font-semibold px-7 py-3.5 rounded-xl hover:bg-sky-50 transition-colors"
-            >
-              Lihat Layanan Lengkap
-              <Icon path="M5 12h14M12 5l7 7-7 7" className="w-4 h-4" />
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <WhatsAppButton variant="outline" className="text-base font-bold px-8 py-3.5 bg-white text-emerald-600 border-0 hover:bg-emerald-50">
+                ✓ Konsultasi Gratis via WhatsApp
+              </WhatsAppButton>
+              <Link
+                href="/kontak"
+                className="inline-flex items-center justify-center gap-2 bg-white/20 text-white font-semibold px-7 py-3.5 rounded-xl border border-white/40 hover:bg-white/30 transition-colors"
+              >
+                Hubungi Tim Kami
+                <Icon path="M5 12h14M12 5l7 7-7 7" className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -630,40 +588,67 @@ export default function HomePage() {
             ))}
           </StaggerGrid>
 
-          <div className="mt-10 text-center">
-            <p className="text-slate-400 text-sm mb-4">Juga didukung oleh</p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              {["🏛 Kemenkes RI", "🏥 BPJS Kesehatan", "🌐 Biznet Networks", "🔌 Plug & Play APAC", "📋 ISO 27001"].map((p) => (
-                <span key={p} className="inline-flex items-center text-slate-600 font-medium text-sm bg-slate-50 px-4 py-2 rounded-full border border-slate-200">
-                  {p}
-                </span>
-              ))}
+        </div>
+      </section>
+
+      {/* ── Partners & Trust ── */}
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-slate-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 lg:mb-16">
+            <span className="inline-block text-emerald-600 text-xs font-bold uppercase tracking-widest px-3 py-1.5 bg-emerald-50 rounded-full mb-4">Kepercayaan</span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">Dipercaya oleh Institusi Terkemuka</h2>
+            <p className="text-slate-500 text-lg max-w-2xl mx-auto">Mitra strategis dan dukungan dari organisasi terdepan di Indonesia</p>
+          </div>
+
+          <div className="space-y-12">
+            {/* Partners */}
+            <div>
+              <p className="text-center text-slate-400 text-xs font-semibold uppercase tracking-wider mb-8">Mitra Perangkat Medis</p>
+              <div className="flex flex-wrap items-center justify-center gap-4 lg:gap-6">
+                {["OMRON", "Alita", "Kemenperindag RI", "DIIB UI", "Mor Clinic"].map((p) => (
+                  <div key={p} className="px-5 lg:px-7 py-3 lg:py-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-300 hover:bg-emerald-50 transition-all duration-200 cursor-default">
+                    <p className="text-slate-700 font-semibold text-sm lg:text-base">{p}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Support Institutions */}
+            <div className="pt-4 lg:pt-8 border-t border-slate-200 mt-4 lg:mt-8">
+              <p className="text-center text-slate-400 text-xs font-semibold uppercase tracking-wider mb-8">Dukungan & Penghargaan</p>
+              <div className="flex flex-wrap items-center justify-center gap-3 lg:gap-4">
+                {[
+                  { icon: "🏛", name: "Kemenkes RI" },
+                  { icon: "🏫", name: "DIIB Universitas Indonesia" },
+                  { icon: "🚀", name: "Plug & Play APAC" },
+                  { icon: "🏆", name: "Tanoto Foundation" },
+                  { icon: "🌏", name: "ASEAN ICT Awards" },
+                ].map((item) => (
+                  <span key={item.name} className="inline-flex items-center gap-2 text-slate-600 font-medium text-xs lg:text-sm bg-white border border-slate-200 px-4 lg:px-5 py-2.5 lg:py-3 rounded-lg hover:border-slate-300 hover:bg-slate-50 transition-all duration-200">
+                    <span className="text-base">{item.icon}</span>
+                    <span>{item.name}</span>
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Testimonials + Certifications ── */}
+      {/* ── Certifications ── */}
       <section className="py-20 lg:py-28 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
             <div className="text-center mb-14">
-              <SectionBadge color="emerald">Testimoni</SectionBadge>
-              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Yang Mereka Katakan</h2>
+              <SectionBadge color="emerald">Sertifikasi Resmi</SectionBadge>
+              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Izin Edar Kemenkes RI</h2>
+              <p className="text-slate-500 max-w-2xl mx-auto">
+                Semua perangkat ATM Sehat telah tersertifikasi resmi oleh Kementerian Kesehatan Republik Indonesia.
+              </p>
             </div>
           </AnimateIn>
 
-          <StaggerGrid className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
-            {testimonials.map((t) => (
-              <StaggerItem key={t.name}>
-                <TestimonialCard {...t} />
-              </StaggerItem>
-            ))}
-          </StaggerGrid>
-
-          {/* Certifications */}
           <div className="bg-white rounded-2xl border border-slate-100 p-8">
-            <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-5">Sertifikasi Izin Edar Kemenkes RI</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {certifications.map((c) => (
                 <CertBadge key={c.name} {...c} />
@@ -735,27 +720,54 @@ export default function HomePage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 lg:py-28 hero-gradient">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-5">
-            Siap Meningkatkan Layanan Kesehatan Anda?
+      <section className="py-20 lg:py-32 hero-gradient">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-8">
+            <span className="inline-block text-white text-xs font-bold uppercase tracking-widest px-4 py-2 bg-white/10 rounded-full border border-white/20 mb-6">
+              ⏱ Respons dalam 2 jam kerja
+            </span>
+          </div>
+          <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+            Mulai Transformasi Layanan Kesehatan Anda Hari Ini
           </h2>
-          <p className="text-white/80 text-lg mb-10 leading-relaxed">
-            Tim kami siap dari konsultasi hingga pemasangan — gratis tanpa komitmen.
+          <p className="text-white/80 text-lg mb-12 leading-relaxed max-w-2xl mx-auto">
+            Bergabung dengan ratusan fasilitas kesehatan yang sudah meningkatkan kualitas pelayanan.
+            Konsultasi gratis, instalasi mudah, dukungan 24/7.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <WhatsAppButton className="shadow-lg shadow-black/20 text-lg px-8 py-4">
-              Hubungi via WhatsApp
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+            <WhatsAppButton className="shadow-lg shadow-black/30 text-lg px-10 py-5 font-bold">
+              💬 Hubungi Sekarang via WhatsApp
             </WhatsAppButton>
             <Link
-              href="/about"
-              className="inline-flex items-center justify-center gap-2 bg-white/10 text-white font-semibold px-8 py-4 rounded-xl border border-white/30 hover:bg-white/20 transition-colors text-base"
+              href="/kontak"
+              className="inline-flex items-center justify-center gap-2 bg-white/15 text-white font-semibold px-8 py-5 rounded-xl border border-white/40 hover:bg-white/25 transition-colors text-base"
             >
-              Tentang ATM Sehat
+              Hubungi Tim Kami
+              <Icon path="M5 12h14M12 5l7 7-7 7" className="w-4 h-4" />
             </Link>
           </div>
-          <p className="text-white/40 text-sm">
-            +62 823-4837-1262 &nbsp;·&nbsp; contact@tsi.co.id
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-white/70 text-sm">
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-emerald-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              Gratis Konsultasi
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-emerald-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              Instalasi Cepat
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-emerald-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              Support 24/7
+            </div>
+          </div>
+          <p className="text-white/50 text-xs mt-10">
+            📞 +62 823-4837-1262 &nbsp;·&nbsp; 📧 info@atm-sehat.com
           </p>
         </div>
       </section>

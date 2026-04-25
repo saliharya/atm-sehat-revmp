@@ -198,11 +198,11 @@ export default function KontakPage() {
           <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-white/5 blur-3xl" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block text-sky-300 font-semibold text-sm uppercase tracking-wider mb-4">Kontak</span>
+          <span className="inline-block text-sky-300 font-semibold text-sm uppercase tracking-wider mb-4">Hubungi Kami</span>
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-5">Kami Siap Membantu Anda</h1>
           <p className="text-white/80 text-lg max-w-2xl mx-auto">
-            Hubungi tim ATM Sehat untuk pertanyaan, kemitraan, atau dukungan teknis.
-            Kami merespons dalam 1–2 hari kerja.
+            Tanya tentang stasiun terdekat, kemitraan, atau dukungan teknis.
+            Tim kami merespons dalam <span className="text-white font-semibold">2 jam kerja</span> via WhatsApp atau email.
           </p>
         </div>
         <div className="absolute bottom-0 inset-x-0">
@@ -253,8 +253,8 @@ export default function KontakPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             {/* Form */}
             <div className="lg:col-span-3">
-              <h2 className="text-2xl font-bold text-slate-900 mb-2">Kirim Pesan</h2>
-              <p className="text-slate-500 mb-8">Tim kami akan merespons dalam 1–2 hari kerja.</p>
+              <h2 className="text-2xl font-bold text-slate-900 mb-2">Kirim Pesan Anda</h2>
+              <p className="text-slate-500 mb-8">⏱ Tim kami merespons dalam <strong>maksimal 2 jam kerja</strong>. Untuk pertanyaan urgent, hubungi via WhatsApp.</p>
 
               {submitted ? (
                 <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-10 text-center">
@@ -344,7 +344,7 @@ export default function KontakPage() {
                 <h3 className="font-semibold text-slate-900 mb-6">Informasi Kontak</h3>
                 <div className="space-y-5">
                   {[
-                    { icon: "M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0zM12 10h.01", label: "Alamat", value: "Tenant Room DISTP UI, Lt. 2, Gedung ILRC, Kampus UI, Depok, Jawa Barat" },
+                    { icon: "M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0zM12 10h.01", label: "Alamat", value: "Tenant DIIB UI, Kampus Universitas Indonesia, Depok, Jawa Barat" },
                     { icon: "M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zM22 6l-10 7L2 6", label: "Email", value: "info@atm-sehat.com" },
                     { icon: "M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.06 1.22 2 2 0 012.06 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z", label: "Telepon", value: "+62 823-4837-1262 (Sigit)" },
                     { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", label: "Jam Operasional", value: "Senin–Jumat, 09.00–17.00 WIB · WhatsApp 24/7" },
@@ -372,7 +372,7 @@ export default function KontakPage() {
               <div className="bg-gradient-to-br from-sky-600 to-emerald-600 rounded-2xl p-7 text-white">
                 <h3 className="font-semibold text-lg mb-2">Pasang ATM Sehat di Lokasi Anda</h3>
                 <p className="text-white/85 text-sm leading-relaxed mb-5">
-                  Bergabunglah dengan 500+ unit yang telah terpasang. Ideal untuk klinik, RS, kantor, universitas, dan area publik.
+                  Bergabunglah dengan ratusan unit yang telah terpasang di 9 provinsi. Ideal untuk klinik, RS, kantor, universitas, dan area publik.
                 </p>
                 <div className="space-y-2 text-sm text-white/90">
                   {["Pemasangan gratis", "Berbagi pendapatan", "Dukungan teknis penuh", "Branding co-location"].map((b) => (

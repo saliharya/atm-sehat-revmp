@@ -14,29 +14,32 @@ const geist = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "ATM Sehat – Cek Kesehatan Semudah Cek Saldo",
+    default: "ATM Sehat – Kiosk Kesehatan IoT Terdepan di Indonesia",
     template: "%s | ATM Sehat",
   },
   description:
-    "ATM Sehat adalah platform kesehatan digital berbasis IoT terdepan di Indonesia. Cek tekanan darah, gula darah, kolesterol, dan konsultasi dokter online — kapan saja, di mana saja.",
+    "ATM Sehat adalah kiosk kesehatan digital berbasis IoT yang memudahkan cek kesehatan lengkap: tekanan darah, gula darah, kolesterol, asam urat, suhu, saturasi oksigen, dan konsultasi dokter online. Mulai dari Rp 5.000. Telah beroperasi di 9 provinsi Indonesia.",
   keywords: [
     "ATM Sehat",
-    "telehealth Indonesia",
     "kiosk kesehatan",
-    "cek kesehatan",
+    "cek kesehatan digital",
+    "telehealth Indonesia",
+    "stasiun kesehatan",
     "konsultasi dokter online",
-    "Tele Sehat Indonesia",
+    "tekanan darah digital",
+    "gula darah meter",
     "HELENA AI",
     "IoT kesehatan",
-    "health kiosk",
+    "health kiosk Indonesia",
+    "Tele Sehat Indonesia",
   ],
   authors: [{ name: COMPANY_NAME }],
   creator: COMPANY_NAME,
   publisher: COMPANY_NAME,
   openGraph: {
-    title: "ATM Sehat – Telehealth for Everyone",
+    title: "ATM Sehat – Kiosk Kesehatan Digital Terdepan",
     description:
-      "Layanan cek kesehatan lengkap dan konsultasi dokter online yang mudah diakses oleh seluruh masyarakat Indonesia.",
+      "Cek kesehatan lengkap dengan teknologi IoT: tekanan darah, gula darah, kolesterol, dan konsultasi dokter online. Dipercaya 500+ fasilitas kesehatan. Mulai Rp 5.000.",
     url: BASE_URL,
     siteName: "ATM Sehat",
     locale: "id_ID",
@@ -44,9 +47,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ATM Sehat – Telehealth for Everyone",
+    title: "ATM Sehat – Kiosk Kesehatan Digital",
     description:
-      "Layanan cek kesehatan lengkap dan konsultasi dokter online yang mudah diakses oleh seluruh masyarakat Indonesia.",
+      "Cek kesehatan mudah, cepat, terjangkau. Teknologi IoT untuk klinik, pabrik, apotek, posyandu. Telah beroperasi di 9 provinsi Indonesia.",
+    creator: "@atm_sehat",
   },
   robots: {
     index: true,
@@ -74,7 +78,7 @@ const organizationSchema = {
   },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Tenant Room DISTP UI, Lt. 2, Gedung ILRC, Kampus UI",
+    streetAddress: "Tenant DIIB UI, Kampus UI",
     addressLocality: "Depok",
     addressRegion: "Jawa Barat",
     postalCode: "16424",
