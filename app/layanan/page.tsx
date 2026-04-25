@@ -3,9 +3,9 @@ import Link from "next/link";
 import WhatsAppButton, { WA_URL } from "../components/WhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Layanan & Paket Harga ATM Sehat | 8 Pemeriksaan Kesehatan",
+  title: "8 Layanan Kesehatan ATM Sehat | Pemeriksaan Digital Terintegrasi",
   description:
-    "Paket lengkap ATM Sehat: Tekanan Darah, Gula Darah, Kolesterol, Asam Urat, Suhu, SpO2, Konsultasi Dokter Online & Kesehatan Anak. Mulai dari Rp 5.000. Dapatkan konsultasi gratis hari ini.",
+    "Akses 8 layanan kesehatan lengkap dalam satu stasiun: Tekanan Darah, Gula Darah, Kolesterol, Asam Urat, Suhu, SpO2, Konsultasi Dokter Online & Kesehatan Anak. Hasil instan dengan akurasi 95%, didukung teknologi AI HELENA.",
 };
 
 const services = [
@@ -24,7 +24,6 @@ const services = [
     ],
     why: "70% penderita hipertensi di Indonesia tidak menyadari kondisinya hingga terlambat.",
     color: "sky",
-    price: "Mulai Rp 5.000",
   },
   {
     id: "gula-darah",
@@ -41,7 +40,6 @@ const services = [
     ],
     why: "Indonesia memiliki 19,5 juta penderita diabetes — dan jutaan belum terdiagnosis.",
     color: "emerald",
-    price: "Mulai Rp 15.000",
   },
   {
     id: "kolesterol",
@@ -58,7 +56,6 @@ const services = [
     ],
     why: "Penyakit jantung adalah penyebab kematian nomor 1 di Indonesia.",
     color: "violet",
-    price: "Mulai Rp 20.000",
   },
   {
     id: "asam-urat",
@@ -75,7 +72,6 @@ const services = [
     ],
     why: "Prevalensi gout di Indonesia terus meningkat, terutama di usia produktif.",
     color: "amber",
-    price: "Mulai Rp 20.000",
   },
   {
     id: "suhu-tubuh",
@@ -92,7 +88,6 @@ const services = [
     ],
     why: "Deteksi suhu sejak dini dapat mencegah komplikasi penyakit infeksi serius.",
     color: "rose",
-    price: "Mulai Rp 5.000",
   },
   {
     id: "saturasi-oksigen",
@@ -109,7 +104,6 @@ const services = [
     ],
     why: "SpO2 di bawah 95% mengindikasikan kondisi yang membutuhkan perhatian medis segera.",
     color: "cyan",
-    price: "Mulai Rp 10.000",
   },
   {
     id: "konsultasi-dokter",
@@ -126,7 +120,6 @@ const services = [
     ],
     why: "Jarak bukan lagi hambatan untuk mendapat layanan medis profesional.",
     color: "sky",
-    price: "Sesuai layanan",
   },
   {
     id: "kesehatan-anak",
@@ -143,7 +136,6 @@ const services = [
     ],
     why: "21,6% balita Indonesia mengalami stunting. Deteksi dini adalah kunci penanganannya.",
     color: "emerald",
-    price: "Mulai Rp 10.000",
   },
 ];
 
@@ -200,13 +192,13 @@ export default function LayananPage() {
           </h1>
           <p className="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed mb-8">
             Dari pemeriksaan vital dasar hingga konsultasi dokter spesialis — semua tersedia
-            dengan harga terjangkau, mudah diakses, dan hasil yang akurat.
+            dengan mudah diakses, hasil yang akurat, dan didukung teknologi AI terkini.
           </p>
           <div className="inline-flex items-center gap-2 bg-white/10 text-white text-sm font-medium px-5 py-2.5 rounded-full border border-white/20">
             <svg className="w-4 h-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" />
             </svg>
-            Hasil instan · Mulai dari Rp 5.000 · Tersedia di 24 kota Indonesia
+            Hasil Instan · Akurasi 95% · Tersedia di 24 Kota Indonesia
           </div>
         </div>
         <div className="absolute bottom-0 inset-x-0">
@@ -262,22 +254,17 @@ export default function LayananPage() {
                         ))}
                       </ul>
 
-                      <div className="flex items-center justify-between flex-wrap gap-4">
-                        <span className={`inline-block px-4 py-2 rounded-full text-sm font-semibold border ${c.badge}`}>
-                          💰 {s.price}
-                        </span>
-                        <a
-                          href={WA_URL}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-white bg-sky-600 font-semibold text-sm px-4 py-2 rounded-lg hover:bg-sky-700 transition-colors"
-                        >
-                          📞 Hubungi Kami
-                          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                          </svg>
-                        </a>
-                      </div>
+                      <a
+                        href={WA_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-white bg-sky-600 font-semibold text-sm px-6 py-3 rounded-lg hover:bg-sky-700 transition-colors w-full justify-center"
+                      >
+                        💬 Tanya Harga & Availability
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                          <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                      </a>
                     </div>
 
                     {/* Visual panel */}
@@ -305,36 +292,31 @@ export default function LayananPage() {
         </div>
       </section>
 
-      {/* Package summary */}
+      {/* Paket Pemeriksaan */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Paket Pemeriksaan Komprehensif
-            </h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Paket Pemeriksaan Komprehensif</h2>
             <p className="text-slate-500 max-w-2xl mx-auto">
-              Hemat lebih banyak dengan memeriksa beberapa parameter sekaligus.
+              Pilih paket yang sesuai kebutuhan Anda. Hubungi tim kami untuk informasi harga dan ketersediaan di lokasi Anda.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 name: "Paket Dasar",
-                price: "Rp 25.000",
                 includes: ["Tekanan Darah", "Suhu Tubuh", "Saturasi Oksigen"],
                 color: "from-sky-600 to-sky-700",
                 popular: false,
               },
               {
                 name: "Paket Standar",
-                price: "Rp 50.000",
                 includes: ["Tekanan Darah", "Gula Darah", "Kolesterol", "Asam Urat", "Suhu Tubuh", "Saturasi Oksigen"],
                 color: "from-emerald-600 to-teal-600",
                 popular: true,
               },
               {
                 name: "Paket Keluarga",
-                price: "Hubungi Kami",
                 includes: ["Semua layanan standar", "Kesehatan Anak & Stunting", "Konsultasi Dokter", "Laporan Kesehatan Keluarga"],
                 color: "from-violet-600 to-indigo-600",
                 popular: false,
@@ -349,17 +331,13 @@ export default function LayananPage() {
                 {pkg.popular && (
                   <div className="absolute top-0 inset-x-0 text-center">
                     <span className="inline-block bg-emerald-500 text-white text-xs font-bold uppercase tracking-wider px-6 py-1.5 rounded-b-xl">
-                      Paling Populer
+                      Rekomendasi
                     </span>
                   </div>
                 )}
                 <div className={`h-2 bg-gradient-to-r ${pkg.color}`} />
                 <div className="p-8 pt-6">
-                  <h3 className="font-bold text-slate-900 text-lg mb-1">{pkg.name}</h3>
-                  <div className="text-3xl font-bold text-slate-900 mb-6">
-                    {pkg.price}
-                    {pkg.price !== "Hubungi Kami" && <span className="text-base font-normal text-slate-500 ml-1">/ kunjungan</span>}
-                  </div>
+                  <h3 className="font-bold text-slate-900 text-lg mb-6">{pkg.name}</h3>
                   <ul className="space-y-3 mb-8">
                     {pkg.includes.map((item) => (
                       <li key={item} className="flex items-center gap-3 text-sm text-slate-700">
@@ -370,30 +348,68 @@ export default function LayananPage() {
                       </li>
                     ))}
                   </ul>
-                  {pkg.popular ? (
-                    <a
-                      href={WA_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block text-center font-semibold py-3 px-6 rounded-xl transition-colors text-sm bg-emerald-600 text-white hover:bg-emerald-700"
-                    >
-                      Hubungi untuk Harga
-                    </a>
-                  ) : (
-                    <Link
-                      href="/kontak"
-                      className="block text-center font-semibold py-3 px-6 rounded-xl transition-colors text-sm bg-slate-100 text-slate-700 hover:bg-slate-200"
-                    >
-                      Tanya Lebih Lanjut
-                    </Link>
-                  )}
+                  <a
+                    href={WA_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block text-center font-semibold py-3 px-6 rounded-xl transition-colors text-sm ${
+                      pkg.popular
+                        ? "bg-emerald-600 text-white hover:bg-emerald-700"
+                        : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                    }`}
+                  >
+                    Tanya Harga & Ketersediaan
+                  </a>
                 </div>
               </div>
             ))}
           </div>
-          <p className="text-center text-slate-400 text-sm mt-8">
-            * Harga dapat bervariasi tergantung lokasi. Hubungi kami untuk informasi harga terkini.
-          </p>
+        </div>
+      </section>
+
+      {/* Why choose ATM Sehat */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Mengapa Memilih ATM Sehat?</h2>
+            <p className="text-slate-500 max-w-2xl mx-auto">
+              Solusi kesehatan modern yang akurat, mudah diakses, dan didukung teknologi terkini.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: "M13 10V3L4 14h7v7l9-11h-7z",
+                title: "Hasil Instan",
+                desc: "Dapatkan hasil pemeriksaan dalam hitungan detik dengan teknologi IoT terkini.",
+              },
+              {
+                icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z",
+                title: "Akurasi 95%",
+                desc: "Semua perangkat tersertifikasi KEMENKES RI dengan kalibrasi rutin setiap tahun.",
+              },
+              {
+                icon: "M12 8v4l3 3M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+                title: "Tersedia 24/7",
+                desc: "Akses layanan kesehatan kapan saja, konsultasi dokter dari pagi hingga malam.",
+              },
+              {
+                icon: "M9 12l2 2 4-4M7 20H5a2 2 0 01-2-2V7a2 2 0 012-2h10a2 2 0 012 2v5",
+                title: "Data Aman",
+                desc: "Rekam medis digital tersimpan aman dengan enkripsi SSL/TLS server lokal Indonesia.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="bg-slate-50 rounded-2xl border border-slate-100 p-6 hover:border-sky-300 hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d={item.icon} />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-slate-900 mb-2 text-sm">{item.title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

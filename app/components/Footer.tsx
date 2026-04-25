@@ -190,35 +190,65 @@ export default function Footer() {
             persyaratan legalitas serta perpajakan di Republik Indonesia.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {/* ASSET NEEDED: SK Pendirian — legal document image (akta/SK pendirian PT Tele Sehat Indonesia). Old site had a placeholder card with no image. */}
-            {/* TODO: replace with real verified data — SK Pendirian number, issue date, and document scan */}
-            <div className="rounded-xl border border-slate-800 bg-slate-950/40 p-4">
-              <p className="text-xs font-semibold text-slate-300 uppercase tracking-wider">SK Pendirian</p>
-              <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
-                Surat Keputusan pendirian perusahaan.
+            {/* SK Pendirian — official company establishment certificate from Kemenkomham */}
+            <a
+              href="https://atm-sehat.com/wp-content/uploads/2024/09/SK-Kemenkumham-PT.-TSI-1.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-xl border border-slate-700 bg-slate-950/40 p-4 hover:border-sky-500 hover:bg-slate-900 transition-all group cursor-pointer"
+            >
+              <p className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3 group-hover:text-sky-400 transition-colors">
+                SK Pendirian
               </p>
-              <p className="text-[10px] text-slate-600 mt-3 italic">Dokumen tersedia atas permintaan resmi.</p>
-            </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://atm-sehat.com/wp-content/uploads/2024/09/SK-Kemenkumham-PT.-TSI-1.png"
+                alt="SK Pendirian PT Tele Sehat Indonesia"
+                className="w-full h-32 object-cover rounded-lg mb-2"
+                loading="lazy"
+              />
+              <p className="text-[10px] text-slate-500">Klik untuk lihat dokumen lengkap →</p>
+            </a>
 
-            {/* ASSET NEEDED: NIB document image / number — verify against https://oss.go.id. Old site placeholder card had no number/image. */}
-            {/* TODO: replace with real verified data — NIB (Nomor Induk Berusaha) issued by OSS */}
-            <div className="rounded-xl border border-slate-800 bg-slate-950/40 p-4">
-              <p className="text-xs font-semibold text-slate-300 uppercase tracking-wider">NIB</p>
-              <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
-                Nomor Induk Berusaha terdaftar pada sistem OSS Republik Indonesia.
+            {/* NIB — Nomor Induk Berusaha from OSS (Sistem Registrasi Elektronik) */}
+            <a
+              href="https://atm-sehat.com/wp-content/uploads/2024/09/UPDATE_NIB-OSS-RBA_PT-TSI_page-0001-1.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-xl border border-slate-700 bg-slate-950/40 p-4 hover:border-emerald-500 hover:bg-slate-900 transition-all group cursor-pointer"
+            >
+              <p className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3 group-hover:text-emerald-400 transition-colors">
+                NIB
               </p>
-              <p className="text-[10px] text-slate-600 mt-3 italic">Dokumen tersedia atas permintaan resmi.</p>
-            </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://atm-sehat.com/wp-content/uploads/2024/09/UPDATE_NIB-OSS-RBA_PT-TSI_page-0001-1.png"
+                alt="NIB (Nomor Induk Berusaha) PT Tele Sehat Indonesia"
+                className="w-full h-32 object-cover rounded-lg mb-2"
+                loading="lazy"
+              />
+              <p className="text-[10px] text-slate-500">Terdaftar di sistem OSS →</p>
+            </a>
 
-            {/* ASSET NEEDED: NPWP document image / number — display only masked digits (XXX.XXX.XXX.X-XXX.XXX) unless full number was on old site. Old site had no value. */}
-            {/* TODO: replace with real verified data — NPWP (masked); show full number only if explicitly approved */}
-            <div className="rounded-xl border border-slate-800 bg-slate-950/40 p-4">
-              <p className="text-xs font-semibold text-slate-300 uppercase tracking-wider">NPWP</p>
-              <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
-                Nomor Pokok Wajib Pajak terdaftar pada Direktorat Jenderal Pajak.
+            {/* NPWP — Nomor Pokok Wajib Pajak from Direktorat Jenderal Pajak */}
+            <a
+              href="https://atm-sehat.com/wp-content/uploads/2024/09/NPWP-PT.-TSI-300x201.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-xl border border-slate-700 bg-slate-950/40 p-4 hover:border-violet-500 hover:bg-slate-900 transition-all group cursor-pointer"
+            >
+              <p className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3 group-hover:text-violet-400 transition-colors">
+                NPWP
               </p>
-              <p className="text-[10px] text-slate-600 mt-3 italic">Dokumen tersedia atas permintaan resmi.</p>
-            </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://atm-sehat.com/wp-content/uploads/2024/09/NPWP-PT.-TSI-300x201.jpg"
+                alt="NPWP (Nomor Pokok Wajib Pajak) PT Tele Sehat Indonesia"
+                className="w-full h-32 object-cover rounded-lg mb-2"
+                loading="lazy"
+              />
+              <p className="text-[10px] text-slate-500">DJP, Kemenkeu RI →</p>
+            </a>
           </div>
         </div>
 
