@@ -335,7 +335,7 @@ export default function TermsAndConditions() {
                   </div>
                 </div>
                 <div className="px-7 py-6">
-                  <p className="text-slate-600 text-sm leading-relaxed">Beberapa layanan ATM Sehat memerlukan biaya mulai dari <strong className="text-slate-800">Rp 5.000</strong>. Dengan melakukan transaksi, Anda menyetujui harga yang ditampilkan. Harga dapat berubah tanpa pemberitahuan sebelumnya. Pembayaran diproses melalui penyedia pembayaran pihak ketiga yang telah bersertifikat.</p>
+                  <p className="text-slate-600 text-sm leading-relaxed">Beberapa layanan ATM Sehat memerlukan biaya yang besarannya ditentukan berdasarkan lokasi dan paket yang dipilih. Dengan melakukan transaksi, Anda menyetujui harga yang ditampilkan. Harga dapat berubah tanpa pemberitahuan sebelumnya. Pembayaran diproses melalui penyedia pembayaran pihak ketiga yang telah bersertifikat.</p>
                 </div>
               </section>
 

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | ATM Sehat",
   },
   description:
-    "ATM Sehat adalah kiosk kesehatan digital berbasis IoT yang memudahkan cek kesehatan lengkap: tekanan darah, gula darah, kolesterol, asam urat, suhu, saturasi oksigen, dan konsultasi dokter online. Mulai dari Rp 5.000. Telah beroperasi di 9 provinsi Indonesia.",
+    "ATM Sehat adalah kiosk kesehatan digital berbasis IoT yang memudahkan cek kesehatan lengkap: tekanan darah, gula darah, kolesterol, asam urat, suhu, saturasi oksigen, dan konsultasi dokter online. Telah beroperasi di 9 provinsi Indonesia.",
   keywords: [
     "ATM Sehat",
     "kiosk kesehatan",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ATM Sehat – Kiosk Kesehatan Digital Terdepan",
     description:
-      "Cek kesehatan lengkap dengan teknologi IoT: tekanan darah, gula darah, kolesterol, dan konsultasi dokter online. Telah beroperasi di 9 provinsi Indonesia. Mulai Rp 5.000.",
+      "Cek kesehatan lengkap dengan teknologi IoT: tekanan darah, gula darah, kolesterol, dan konsultasi dokter online. Telah beroperasi di 9 provinsi Indonesia.",
     url: BASE_URL,
     siteName: "ATM Sehat",
     locale: "id_ID",

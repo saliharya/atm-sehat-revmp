@@ -6,7 +6,7 @@ import { AnimateIn, StaggerGrid, StaggerItem } from "./components/AnimateIn";
 export const metadata: Metadata = {
   title: "ATM Sehat – Kiosk Kesehatan Digital IoT | Cek Kesehatan Mudah & Terjangkau",
   description:
-    "ATM Sehat adalah kiosk kesehatan digital terdepan di Indonesia. Cek tekanan darah, gula darah, kolesterol, asam urat dalam 1 stasiun. Mulai dari Rp 5.000. Telah beroperasi di 9 provinsi. Konsultasi dokter online tersedia.",
+    "ATM Sehat adalah kiosk kesehatan digital terdepan di Indonesia. Cek tekanan darah, gula darah, kolesterol, asam urat dalam 1 stasiun. Telah beroperasi di 9 provinsi. Konsultasi dokter online tersedia.",
 };
 
 /* ─── Shared icon helper ─── */
@@ -194,7 +194,7 @@ export default function HomePage() {
                 <span className="text-sky-300">Semudah Cek Saldo</span>
               </h1>
               <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-xl animate-fade-in-up delay-100">
-                Stasiun kesehatan pintar yang memudahkan cek tekanan darah, gula darah, kolesterol, dan konsultasi dokter — dari Rp 5.000. Sudah dipercaya oleh{" "}
+                Stasiun kesehatan pintar yang memudahkan cek tekanan darah, gula darah, kolesterol, dan konsultasi dokter. Sudah dipercaya oleh{" "}
                 <span className="text-white font-semibold">19+ mitra fasilitas kesehatan</span>.
               </p>
 
@@ -286,7 +286,7 @@ export default function HomePage() {
           <div className="bg-gradient-to-br from-sky-600 to-emerald-600 rounded-3xl p-8 lg:p-12 text-white text-center">
             <h3 className="text-2xl lg:text-3xl font-bold mb-4">Siap Tingkatkan Layanan Kesehatan Anda?</h3>
             <p className="text-white/85 max-w-2xl mx-auto text-lg leading-relaxed mb-8">
-              ATM Sehat menghapus semua hambatan: mudah diakses, terjangkau (mulai Rp 5.000), dan hasil instan.
+              ATM Sehat menghapus semua hambatan: mudah diakses, terjangkau, dan hasil instan.
               Tim kami siap membantu dari konsultasi gratis hingga instalasi.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
