@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-
-const BASE_URL = "https://atm-sehat.com";
+import { BASE_URL } from "./constants";
 
 export function buildCanonical(path: string): string {
   const normalised = path.startsWith("/") ? path : `/${path}`;

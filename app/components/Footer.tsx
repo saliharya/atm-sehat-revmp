@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const quickLinks = [
   { href: "/", label: "Beranda" },
@@ -35,8 +36,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2.5 mb-5">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src="https://atmsehat.co.id/wp-content/uploads/2024/09/cropped-1.png"
                 alt="ATM Sehat"
                 width={36}
@@ -188,10 +188,10 @@ export default function Footer() {
             &copy; 2017–{new Date().getFullYear()} PT. Tele Sehat Indonesia. Terdaftar di Kemenkes RI. Semua hak dilindungi.
           </p>
           <div className="flex gap-6 text-xs text-slate-500">
-            <Link href="/kontak" className="hover:text-slate-300 transition-colors">
+            <Link href="/kebijakan-privasi" className="hover:text-slate-300 transition-colors">
               Kebijakan Privasi
             </Link>
-            <Link href="/kontak" className="hover:text-slate-300 transition-colors">
+            <Link href="/syarat-ketentuan" className="hover:text-slate-300 transition-colors">
               Syarat &amp; Ketentuan
             </Link>
           </div>

@@ -22,6 +22,10 @@ const pages: Record<string, { title: string; description: string; body: string }
   },
 };
 
+export function generateStaticParams() {
+  return Object.keys(pages).map((slug) => ({ slug }));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const page = pages[slug];

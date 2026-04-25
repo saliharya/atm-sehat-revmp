@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { BASE_URL, COMPANY_NAME, SUPPORT_PHONE } from "@/lib/constants";
 
 const geist = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
-const BASE_URL = "https://atm-sehat.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     "IoT kesehatan",
     "health kiosk",
   ],
-  authors: [{ name: "PT Tele Sehat Indonesia" }],
-  creator: "PT Tele Sehat Indonesia",
-  publisher: "PT Tele Sehat Indonesia",
+  authors: [{ name: COMPANY_NAME }],
+  creator: COMPANY_NAME,
+  publisher: COMPANY_NAME,
   openGraph: {
     title: "ATM Sehat – Telehealth for Everyone",
     description:
@@ -41,21 +41,12 @@ export const metadata: Metadata = {
     siteName: "ATM Sehat",
     locale: "id_ID",
     type: "website",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "ATM Sehat – Anjungan Telehealth Masyarakat Sehat",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "ATM Sehat – Telehealth for Everyone",
     description:
       "Layanan cek kesehatan lengkap dan konsultasi dokter online yang mudah diakses oleh seluruh masyarakat Indonesia.",
-    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -67,11 +58,46 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "PT Tele Sehat Indonesia",
+  alternateName: "ATM Sehat",
+  url: BASE_URL,
+  logo: `${BASE_URL}/og-image.jpg`,
+  description:
+    "Platform kesehatan digital berbasis IoT untuk layanan cek kesehatan dan konsultasi dokter online.",
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: SUPPORT_PHONE,
+    contactType: "Customer Service",
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Tenant Room DISTP UI, Lt. 2, Gedung ILRC, Kampus UI",
+    addressLocality: "Depok",
+    addressRegion: "Jawa Barat",
+    postalCode: "16424",
+    addressCountry: "ID",
+  },
+  sameAs: [
+    "https://www.instagram.com/atm_sehat/",
+    "https://www.facebook.com/TelehealthIndonesia/",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="id" className={`${geist.variable} scroll-smooth`}>
+      <head>
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col antialiased bg-white text-slate-900">
         <Navbar />
         <main className="flex-1">{children}</main>
