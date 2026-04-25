@@ -332,7 +332,7 @@ export default function KontakPage() {
                   </button>
                   <p className="text-xs text-slate-400 text-center">
                     Dengan mengirim pesan, Anda menyetujui{" "}
-                    <Link href="/kontak" className="text-sky-600 hover:underline">Kebijakan Privasi</Link>{" "}kami.
+                    <Link href="/kebijakan-privasi" className="text-sky-600 hover:underline">Kebijakan Privasi</Link>{" "}kami.
                   </p>
                 </form>
               )}
@@ -344,8 +344,8 @@ export default function KontakPage() {
                 <h3 className="font-semibold text-slate-900 mb-6">Informasi Kontak</h3>
                 <div className="space-y-5">
                   {[
-                    { icon: "M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0zM12 10h.01", label: "Alamat", value: "Tenant DIIB UI, Kampus Universitas Indonesia, Depok, Jawa Barat" },
-                    { icon: "M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zM22 6l-10 7L2 6", label: "Email", value: "info@atm-sehat.com" },
+                    { icon: "M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0zM12 10h.01", label: "Alamat", value: "Tenant Room DISTP UI, Lt. 2, Gedung ILRC, Kampus UI, Depok, Jawa Barat" },
+                    { icon: "M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zM22 6l-10 7L2 6", label: "Email", value: "contact@tsi.co.id" },
                     { icon: "M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.06 1.22 2 2 0 012.06 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z", label: "Telepon", value: "+62 823-4837-1262 (Sigit)" },
                     { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", label: "Jam Operasional", value: "Senin–Jumat, 09.00–17.00 WIB · WhatsApp 24/7" },
                   ].map((info) => (

@@ -424,7 +424,7 @@ export default function LayananPage() {
               </svg>
             </Link>
           </div>
-          <p className="text-white/60 text-sm">📞 +62 823-4837-1262 · 📧 info@atm-sehat.com</p>
+          <p className="text-white/60 text-sm">📞 +62 823-4837-1262 · 📧 contact@tsi.co.id</p>
         </div>
       </section>
     </>

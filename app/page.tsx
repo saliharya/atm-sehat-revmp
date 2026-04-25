@@ -601,13 +601,27 @@ export default function HomePage() {
           </div>
 
           <div className="space-y-12">
-            {/* Partners */}
+            {/* Partners — logo images sourced from legacy WordPress media library */}
             <div>
-              <p className="text-center text-slate-400 text-xs font-semibold uppercase tracking-wider mb-8">Mitra Perangkat Medis</p>
-              <div className="flex flex-wrap items-center justify-center gap-4 lg:gap-6">
-                {["OMRON", "Alita", "Kemenperindag RI", "DIIB UI", "Mor Clinic"].map((p) => (
-                  <div key={p} className="px-5 lg:px-7 py-3 lg:py-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-300 hover:bg-emerald-50 transition-all duration-200 cursor-default">
-                    <p className="text-slate-700 font-semibold text-sm lg:text-base">{p}</p>
+              <p className="text-center text-slate-400 text-xs font-semibold uppercase tracking-wider mb-8">Mitra Perangkat Medis & Institusi</p>
+              <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 lg:gap-x-12 lg:gap-y-8">
+                {[
+                  { name: "OMRON", src: "https://atmsehat.co.id/wp-content/uploads/2024/09/1200px-OMRON_Logo.svg_.png" },
+                  { name: "Alita", src: "https://atmsehat.co.id/wp-content/uploads/2024/09/Alita-New-Log.png" },
+                  { name: "Kementerian Perindustrian RI", src: "https://atmsehat.co.id/wp-content/uploads/2024/09/Logo_of_the_Ministry_of_Industries_of_the_Republic_of_Indonesia.svg_.png" },
+                  { name: "WTN", src: "https://atmsehat.co.id/wp-content/uploads/2024/09/wtnnew-scaled-1.jpg" },
+                  { name: "DIIB Universitas Indonesia", src: "https://atmsehat.co.id/wp-content/uploads/2024/09/diibui.jpeg" },
+                  { name: "MJM", src: "https://atmsehat.co.id/wp-content/uploads/2024/09/MJM.jpeg" },
+                  { name: "Mor Clinic", src: "https://atmsehat.co.id/wp-content/uploads/2024/09/MORCLINIC.png" },
+                ].map((p) => (
+                  <div key={p.name} className="flex items-center justify-center h-16 lg:h-20 w-32 lg:w-40 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-200">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={p.src}
+                      alt={p.name}
+                      className="max-h-full max-w-full object-contain"
+                      loading="lazy"
+                    />
                   </div>
                 ))}
               </div>
@@ -658,8 +672,57 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Gallery ── */}
+      {/* ── Videos ── */}
       <section className="py-20 lg:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <SectionBadge color="violet">Video</SectionBadge>
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Lihat ATM Sehat Beraksi</h2>
+            <p className="text-slate-500 max-w-xl mx-auto">
+              Cuplikan dari liputan media dan demo langsung penggunaan ATM Sehat.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            {[
+              { id: "__fantOR02s", title: "ATM Sehat — Healthy Life for Everyone via Telehealth" },
+              { id: "lZy8gnPzi48", title: "New ATM Sehat Kit" },
+              { id: "-29rWK0A0Ts", title: "Digital Inside: Cek Kesehatan Via ATM #1" },
+              { id: "dHoleoMyDdU", title: "Digital Inside: Cek Kesehatan Via ATM #2" },
+            ].map((v) => (
+              <div key={v.id} className="rounded-2xl overflow-hidden border border-slate-100 bg-slate-100 shadow-sm">
+                <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden" }}>
+                  <iframe
+                    src={`https://www.youtube.com/embed/${v.id}`}
+                    title={v.title}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
+                  />
+                </div>
+                <div className="px-5 py-3 bg-white">
+                  <p className="text-sm font-medium text-slate-700 line-clamp-2">{v.title}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <a
+              href="https://www.youtube.com/@telehealthindonesia8220"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sky-600 font-semibold hover:text-sky-700 transition-colors border-b border-sky-200 hover:border-sky-400 pb-0.5"
+            >
+              Kunjungi Channel YouTube @telehealthindonesia8220 →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Gallery ── */}
+      <section className="py-20 lg:py-28 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <SectionBadge>Galeri</SectionBadge>
@@ -767,7 +830,7 @@ export default function HomePage() {
             </div>
           </div>
           <p className="text-white/50 text-xs mt-10">
-            📞 +62 823-4837-1262 &nbsp;·&nbsp; 📧 info@atm-sehat.com
+            📞 +62 823-4837-1262 &nbsp;·&nbsp; 📧 contact@tsi.co.id
           </p>
         </div>
       </section>

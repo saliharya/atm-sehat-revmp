@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ATM Sehat – Kiosk Kesehatan Digital Terdepan",
     description:
-      "Cek kesehatan lengkap dengan teknologi IoT: tekanan darah, gula darah, kolesterol, dan konsultasi dokter online. Dipercaya 500+ fasilitas kesehatan. Mulai Rp 5.000.",
+      "Cek kesehatan lengkap dengan teknologi IoT: tekanan darah, gula darah, kolesterol, dan konsultasi dokter online. Telah beroperasi di 9 provinsi Indonesia. Mulai Rp 5.000.",
     url: BASE_URL,
     siteName: "ATM Sehat",
     locale: "id_ID",
@@ -78,7 +78,7 @@ const organizationSchema = {
   },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Tenant DIIB UI, Kampus UI",
+    streetAddress: "Tenant Room DISTP UI, Lt. 2, Gedung ILRC, Kampus UI",
     addressLocality: "Depok",
     addressRegion: "Jawa Barat",
     postalCode: "16424",

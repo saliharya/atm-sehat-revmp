@@ -182,6 +182,46 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Legalitas Perusahaan */}
+        <div className="border-t border-slate-800 pt-10 pb-12">
+          <h3 className="font-semibold text-white mb-2 text-sm uppercase tracking-wider">Legalitas Perusahaan</h3>
+          <p className="text-xs text-slate-500 mb-6 max-w-2xl">
+            PT Tele Sehat Indonesia adalah badan usaha yang terdaftar resmi dan memenuhi
+            persyaratan legalitas serta perpajakan di Republik Indonesia.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {/* ASSET NEEDED: SK Pendirian — legal document image (akta/SK pendirian PT Tele Sehat Indonesia). Old site had a placeholder card with no image. */}
+            {/* TODO: replace with real verified data — SK Pendirian number, issue date, and document scan */}
+            <div className="rounded-xl border border-slate-800 bg-slate-950/40 p-4">
+              <p className="text-xs font-semibold text-slate-300 uppercase tracking-wider">SK Pendirian</p>
+              <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
+                Surat Keputusan pendirian perusahaan.
+              </p>
+              <p className="text-[10px] text-slate-600 mt-3 italic">Dokumen tersedia atas permintaan resmi.</p>
+            </div>
+
+            {/* ASSET NEEDED: NIB document image / number — verify against https://oss.go.id. Old site placeholder card had no number/image. */}
+            {/* TODO: replace with real verified data — NIB (Nomor Induk Berusaha) issued by OSS */}
+            <div className="rounded-xl border border-slate-800 bg-slate-950/40 p-4">
+              <p className="text-xs font-semibold text-slate-300 uppercase tracking-wider">NIB</p>
+              <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
+                Nomor Induk Berusaha terdaftar pada sistem OSS Republik Indonesia.
+              </p>
+              <p className="text-[10px] text-slate-600 mt-3 italic">Dokumen tersedia atas permintaan resmi.</p>
+            </div>
+
+            {/* ASSET NEEDED: NPWP document image / number — display only masked digits (XXX.XXX.XXX.X-XXX.XXX) unless full number was on old site. Old site had no value. */}
+            {/* TODO: replace with real verified data — NPWP (masked); show full number only if explicitly approved */}
+            <div className="rounded-xl border border-slate-800 bg-slate-950/40 p-4">
+              <p className="text-xs font-semibold text-slate-300 uppercase tracking-wider">NPWP</p>
+              <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
+                Nomor Pokok Wajib Pajak terdaftar pada Direktorat Jenderal Pajak.
+              </p>
+              <p className="text-[10px] text-slate-600 mt-3 italic">Dokumen tersedia atas permintaan resmi.</p>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom bar */}
         <div className="border-t border-slate-800 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-500 text-center sm:text-left">

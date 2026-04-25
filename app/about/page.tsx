@@ -323,7 +323,7 @@ export default function AboutPage() {
               <p className="text-sm text-slate-500">Kami membuka peluang bagi profesional yang bersemangat memajukan kesehatan Indonesia.</p>
             </div>
             <a
-              href="mailto:info@atm-sehat.com?subject=Lamaran%20Kerja%20ATM%20Sehat"
+              href="mailto:contact@tsi.co.id?subject=Lamaran%20Kerja%20ATM%20Sehat"
               className="inline-flex items-center gap-2 border-2 border-sky-600 text-sky-600 font-semibold px-6 py-3 rounded-xl hover:bg-sky-50 transition-colors shrink-0 text-sm"
             >
               Kirim CV Anda →
